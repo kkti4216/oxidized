@@ -36,12 +36,12 @@ class IOSXR < Oxidized::Model
     post_login 'terminal length 0'
     post_login 'terminal width 0'
     post_login 'terminal exec prompt no-timestamp'
-    if vars :enable
-      post_login do
-        send "enable\n"
-        send vars(:enable) + "\n"
-      end
-    end
+    # if vars :enable
+    #   post_login do
+    #     send "enable\n"
+    #     send vars(:enable) + "\n"
+    #   end
+    # end
     pre_logout 'exit'
   end
 end
