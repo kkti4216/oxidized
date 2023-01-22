@@ -24,10 +24,10 @@ class BR < Oxidized::Model
       comment cfg
     end
 
-    # cmd 'show running-config' do |cfg|
-    #   arr = cfg.each_line.to_a
-    #   arr[2..-1].join unless arr.length < 2
-    # end
+    cmd 'show running-config' do |cfg|
+      arr = cfg.each_line.to_a
+      arr[2..-1].join unless arr.length < 2
+    end
 
     cfg :telnet do
       username /^Username:/
