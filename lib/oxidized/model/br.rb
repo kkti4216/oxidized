@@ -3,10 +3,10 @@ class BR < Oxidized::Model
     # comment '! '
 
     # not possible to disable paging prior to show running-config
-    expect /^((.*)Others to exit ---(.*))$/ do |data, re|
-      send 'a'
-      data.sub re, ''
-    end
+    # expect /^((.*)Others to exit ---(.*))$/ do |data, re|
+    #   send 'a'
+    #   data.sub re, ''
+    # end
 
     cmd :all do |cfg|
       # sometimes br6910s inserts arbitrary whitespace after commands are
@@ -24,10 +24,10 @@ class BR < Oxidized::Model
       comment cfg
     end
 
-    cmd 'show running-config' do |cfg|
-      arr = cfg.each_line.to_a
-      arr[2..-1].join unless arr.length < 2
-    end
+    # cmd 'show running-config' do |cfg|
+    #   arr = cfg.each_line.to_a
+    #   arr[2..-1].join unless arr.length < 2
+    # end
 
     cfg :telnet do
       username /^Username:/
