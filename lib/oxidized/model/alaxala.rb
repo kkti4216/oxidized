@@ -2,12 +2,6 @@ class ALAXALA < Oxidized::Model
     prompt /([\w.@()-]+[#>]\s?)$/
     comment '! '
 
-    # not possible to disable paging prior to show running-config
-    # expect /^((.*)Others to exit ---(.*))$/ do |data, re|
-    #   send 'a'
-    #   data.sub re, ''
-    # end
-
     cmd :all do |cfg|
       cfg.each_line.to_a[2..-2].join
     end
