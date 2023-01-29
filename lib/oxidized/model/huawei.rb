@@ -1,5 +1,5 @@
 class HUAWEI< Oxidized::Model
-    prompt /.*(<[\w.-/]+>)$/
+    prompt /.*(<[\w.-\/]+>)$/
     comment '# '
 
     cmd :secret do |cfg|
