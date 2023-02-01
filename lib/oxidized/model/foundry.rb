@@ -17,7 +17,7 @@ class FOUNDRY < Oxidized::Model
 
     cfg :telnet do
       username /^Please Enter Login Name:/
-      password /^Please Enter Password:Please Enter Password:/
+      password /^Please Enter Password:/
     end
 
     cfg :telnet, :ssh do
