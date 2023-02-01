@@ -1,4 +1,4 @@
-class Foundry < Oxidized::Model
+class FOUNDRY < Oxidized::Model
     prompt /([\w.@()-]+[#>]\s?)$/
     comment '! '
 
