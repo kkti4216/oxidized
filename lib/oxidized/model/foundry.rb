@@ -22,6 +22,7 @@ class FOUNDRY < Oxidized::Model
 
     cfg :telnet, :ssh do
       post_login 'terminal length 0'
+      psot_login 'skip-page-display'
       pre_logout 'exit'
     end
   end
