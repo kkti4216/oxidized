@@ -16,8 +16,8 @@ class ALAXALA < Oxidized::Model
     end
 
     cfg :telnet do
-      username /^Username:/
-      password /^Password:/
+      username /login:/
+      password /Password:/
     end
 
     cfg :telnet, :ssh do
