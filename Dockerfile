@@ -28,7 +28,11 @@ RUN git fetch --unshallow || true
 RUN rake install
 
 # web interface
-RUN gem install oxidized-web --no-document
+# RUN gem install oxidized-web --no-document
+WORKDIR /tmp/
+RUN git clone --depth 1 https://github.com/ytti/oxidized-web.git
+WORKDIR /tmp/oxidized-web
+RUN rake install
 
 # clean up
 WORKDIR /
