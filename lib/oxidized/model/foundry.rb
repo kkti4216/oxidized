@@ -6,7 +6,7 @@ class FOUNDRY < Oxidized::Model
       cfg.each_line.to_a[2..-2].join
     end
 
-    cmd 'show version | exclude system' do |cfg|
+    cmd 'show version | exclude uptime|system' do |cfg|
       comment cfg
     end
 
